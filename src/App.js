@@ -35,13 +35,10 @@ import data from "./data"
 function App() {
   const cards = data.map(item => {
     return (
-      <Card 
-      img={item.coverImg} 
-      title={item.title} 
-      price={item.price} 
-      rating={item.stats.rating} 
-      reviewCount={item.stats.reviewCount} 
-      country={item.location} 
+      <Card
+      key = {item.id} 
+      // item = {item}
+      {...item}
       />
     )
   })
